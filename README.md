@@ -1,2 +1,2 @@
 # HTML-AND-CSS-PROJECTS
-My repository for the HTML and CSS course from The Tech Academy
+My repository for coding exercises from the HTML and CSS Course from The Tech Academy
