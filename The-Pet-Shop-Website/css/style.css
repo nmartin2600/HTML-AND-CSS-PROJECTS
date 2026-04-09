@@ -3,6 +3,8 @@
 
 body {
     background-color: white;
+    overflow-x: hidden; /*Hides bottom left right scroll bar
+    when elements stretch beyond screen border*/
 }
 
 /*NAVBAR*/
@@ -14,4 +16,34 @@ li {
 
 a {
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px .5px 4px rgba(46,31,31,0.5);
+    color: white;
+    text-decoration: none; /*Removes default link styling*/
+}
+
+a:hover {
+    color: #d7eaf7; /*Changes color of anchor on hover*/
+}
+
+.nav-bar {
+    background-color: #216391;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*The following minus margins stretch navbar background
+    beyond web browser screen edge*/
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: sticky; /*Creates a sticky element that stays in
+    the same spot in the browser screen*/
+    top: 0; /*Tells browser to stick element at top of the page based on scrolling*/
+}
+
+/*Creates a line under Home and Contact links
+to separate them from image links*/
+#nav-border {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffffff;
 }
