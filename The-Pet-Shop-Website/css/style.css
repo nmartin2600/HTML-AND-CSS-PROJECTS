@@ -1,5 +1,7 @@
 /*Import link for Roboto font from Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*Same as above for Mukta font*/
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
 body {
     background-color: white;
@@ -8,7 +10,6 @@ body {
 }
 
 /*NAVBAR*/
-
 li {
     display: inline;
     padding: 5px;
@@ -46,4 +47,55 @@ to separate them from image links*/
 #nav-border {
     padding-bottom: 10px;
     border-bottom: 3px solid #ffffff;
+}
+
+/*HEADERS*/
+h1,h2,h3 {
+    color: #0a3f63;
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+    text-shadow: 1px .5px 4px rgba(0,0,0,0.5);
+    margin: 0px;
+}
+
+h1 {
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#contact-h3 {
+    text-shadow: none;
+}
+
+/*Creates text color change animation on h1 tags
+for Home and Contact page headers*/
+@keyframes color-text {
+    0% {color: #b5e1ff;}
+    100% {color: #0a3f63;}
+}
+
+/*Calls animation by name in a CSS selector so
+it can be applied to a specific HTML element*/
+.animate-text {
+    animation: color-text 4s;
+}
+
+/*BODY CONTENT*/
+img {
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4), 
+    0 6px 20px 0 rgba(0,0,0,19);
 }
