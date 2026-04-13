@@ -177,3 +177,59 @@ so the image can be centered*/
 .overlay:hover {
     opacity: 0.6;
 }
+
+/*Targets video on the page*/
+iframe {
+    display: table;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+}
+
+/*Styles div element that holds the video*/
+#video {
+    background-color: #c3e0c5;
+    padding-top: 5px; /*Padding will add inline space so elements don't sit on edge of div*/
+    padding-bottom: 50px;
+}
+
+footer {
+    background-color: #216391;
+    margin-top: 50px;
+    /*Negative margins stretch footer beyond web browser screen edge*/
+    margin-right: -10px;
+    margin-left: -10px;
+    bottom: 0; /*Positions footer on bottom of screen*/
+}
+
+/*Styles table elements within the footer tags*/
+table {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    width: 33%; /*Divide the 3 columns equally*/
+}
+
+/*Styles paragraph elements within table data elements*/
+td p {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255,255,255);
+}
+
+/*FORM CSS*/
+form {
+    padding: 15px;
+    display: table;
+    margin: auto;
+}
+
+input {
+    border: 2px solid rgb(165,165,165);
+    border-radius: 2px;
+    padding: 1px;
+    margin: 10px 15px 10px 0px;
+    font-size: 20px;
+    color: rgb(165,165,165);
+}
