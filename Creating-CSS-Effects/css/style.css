@@ -123,3 +123,72 @@ img {
 .overlay:hover {
     opacity: 0.6;
 }
+
+/*IMAGE TWO*/
+.zoom {
+    transform: scale(1); /*Sets base size of Image 2 for zoom in effect*/
+    transition: 0.5s ease-out; /*Creates a smooth transition of image zooming back to original size*/
+    z-index: 3; /*Sets image position in stack layer behind navbar so zoom effect does not cover it*/
+}
+
+/*Creates a zoom in effect on Image 2 */
+.zoom:hover {
+    transform: scale(1.5); /*Scales Image 2 to grow half its size*/
+    transition: 0.5s ease-out;
+}
+
+/*IMAGE THREE*/
+/*Creates position of animation burst and hides overflow of shape size going beyond edges of Image 3*/
+.circle {
+    position: relative;
+    margin: 0px;
+    overflow: hidden;
+}
+
+/*Sets up the burst animation shape and position before hover is triggered*/
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%; /*Creates a circle/oval shape*/
+    opacity: 0; /*Makes shape invisible until animation is triggered by hover*/
+    top: 50%;
+    left: 50%; /*Top and left position circle to center of image*/
+    transform: translate(-50%,-50%); /*Allows circle to evenly expand on all four sides of Image 3*/
+    animation: burst-reverse 1s;
+}
+
+/*Triggers hover effect on the circle class selector*/
+.circle:hover::before {
+    animation: burst 1s;
+    animation-fill-mode: forwards;
+}
+
+/*Creates a growing circle effect*/
+@keyframes burst {
+    0% /*0% is start of animation*/ {
+        opacity: 0.2;
+        background-color: rgb(224,224,224);
+    }
+    100% /*100% is the end of the animation*/ {
+        opacity: 0.7;
+        background-color: rgb(224,224,224);
+        width: 300%;
+        height: 300%;
+    }
+}
+
+/*Animation of circle shrinking back to center of image*/
+@keyframes burst-reverse {
+    0% {
+        opacity: 0.7;
+        background-color: rgb(224,224,224);
+        width: 300%;
+        height: 300%;
+    }
+    100% {
+        opacity: 0.2;
+        background-color: rgb(224,224,224);
+    }
+}
