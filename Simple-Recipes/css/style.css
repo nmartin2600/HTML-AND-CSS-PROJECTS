@@ -1,0 +1,43 @@
+/*Import Josefin Slab font from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+
+html {
+    overflow-x: hidden; /*Prevents browser from displaying left to right scrollbar due to negative value margins*/
+}
+
+/*NAVBAR*/
+.nav-bar {
+    position: sticky; /*Creates sticky element that stays in same spot in browser screen*/
+    top: 0; /*Stick element at top of page based on user scrolling*/
+    z-index: 9; /*Sets stack layer of navbar to scroll over all elements*/
+}
+
+ul {
+    display: flex; /*Creates flex container that expands or shrinks elements,
+    places them side by side horizontally*/
+    list-style-type: none; /*Removes default styling for unordered list elements*/
+    align-items: center;
+    margin: -8px -8px 0px -8px; /*Margin order is top, right, bottom, left.
+    Negative margins will stretch background beyond edge of browser screen*/
+    background-color: rgb(1,128,106);
+    border-bottom: 5px solid rgb(247,177,188);
+}
+
+a {
+    font-family: 'Josefin Slab', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(247,177,188);
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in;
+}
+
+a:hover {
+    background-color: rgb(149,238,233);
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgb(0,0,0,0.7);
+    transition: background-color 0.3s ease-in;
+}
