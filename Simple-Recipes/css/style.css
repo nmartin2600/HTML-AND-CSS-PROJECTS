@@ -3,6 +3,7 @@
 
 html {
     overflow-x: hidden; /*Prevents browser from displaying left to right scrollbar due to negative value margins*/
+    scroll-behavior: smooth; /*Creates smooth scrolling effect when a bookmark link is clicked*/
 }
 
 /*NAVBAR*/
@@ -24,6 +25,8 @@ ul {
 }
 
 a {
+    display: block; /*Displays anchor elements vertically
+    on a new line so that drop down menu will display vertically*/
     font-family: 'Josefin Slab', sans-serif;
     font-size: 25px;
     font-weight: 800;
@@ -35,9 +38,64 @@ a {
     transition: background-color 0.3s ease-in;
 }
 
-a:hover {
+/*Only-of-type effects the only nested child of an element.
+This will keep background blue while hovering and text white
+when moving mouse over anchor elements in rollover-menu div*/
+a:hover, .drop:hover a:only-of-type {
     background-color: rgb(149,238,233);
     color: white;
     box-shadow: 0px 8px 16px 0px rgb(0,0,0,0.7);
     transition: background-color 0.3s ease-in;
+}
+
+.rollover-menu {
+    display: none; /*Prevents the anchor links in this div from
+    showing on web browser until specified*/
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/*Creates trigger effect when user hovers mouse over Recipes link,
+will display  all elements within rollover-menu div*/
+.drop:hover .rollover-menu {
+    display: block;
+}
+
+.rollover-menu a {
+    color: rgb(0,80,67);
+}
+
+.rollover-menu a:hover {
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(90,90,90,0.2);
+}
+
+.rollover-menu a:nth-child(1) {
+    border-top: 5px solid rgb(238,118,136);
+}
+
+/*FOOTER*/
+footer {
+    align-items: center; /*Aligns nested HTML elements in the center such as table data*/
+    margin: 0px -8px -8px -8px; /*Stretches footer background beyond browsers edge*/
+    background-color: rgb(1,128,106);
+    border-top: 5px solid rgb(247,177.188);
+    bottom: 0; /*Positions footer at bottom of screen*/
+}
+
+table {
+    width: 100%; /*Takes up full width of browser screen*/
+}
+
+td {
+    width: 33%; /*Each table data item takes 1/3 of screen*/
+}
+
+td p {
+    font-family: 'Josefin Slab', serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(247,177,188);
 }
