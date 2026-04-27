@@ -350,6 +350,11 @@ input[type="button"]:hover {
     color: white;
 }
 
+/*ABOUT*/
+#about {
+    margin: 20px auto -70px auto;
+}
+
 /*CONTACT FORM CSS*/
 /*Sets up the content within the div tag containing the ID
 contact to be centered on the webpage*/
