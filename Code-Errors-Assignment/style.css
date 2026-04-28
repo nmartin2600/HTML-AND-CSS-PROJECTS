@@ -1,0 +1,17 @@
+/*BODY*/
+body {
+    background-color: lightblue;  /*Makes background color of body section a light blue*/
+    color: darkblue; /*Makes all text in the body a dark blue color*/
+}
+
+/*LOGO IMAGE*/
+img {
+    width: 600px;
+    height: 300px;
+    border: 2px dashed red; /*Creates a dashed red border 2px thick around logo*/
+}
+
+/*H3*/
+h3 {
+    text-align: center; /*Aligns h3 text above video in center*/
+}
