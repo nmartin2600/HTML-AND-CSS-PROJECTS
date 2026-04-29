@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Video Game Zone</title>
         <meta charset="UTF-8">
         <meta name="description" content="Webpage about video game consoles">
+        <link rel="stylesheet" href="css/open_page_website.css">
     </head>
     <body>
         <!--NAVBAR-->
@@ -18,15 +19,15 @@
         <!--HEADER-->
         <header>
             <div>
-                <h1>Welcome to the Video Game Zone!</h1>
-                <p>This page will show you about various video game consoles!</p>
+                <h1 id="welcome">Welcome to the Video Game Zone!</h1>
+                <p id="page">This page will show you about various video game consoles!</p>
             </div>
         </header>
         <!--CONSOLE IMAGES-->
         <section>
             <div>
                 <h2>Choose a console:</h2>
-                <div>
+                <div class="console-container">
                     <!--NINTENDO IMAGE-->
                     <div id="nintendo">
                         <h3>Nintendo Switch 2</h3>
@@ -49,8 +50,9 @@
         <section>
              <!--CONSOLE VIDEO-->
              <div id="video">
-                <h3>Console Comparison Video</h3>
-                <iframe width="1280" height="720" src="https://www.youtube.com/embed/G7khchtGL2A?si=IHTwCbHKAoA84M0Y"></iframe>
+                <h2>Console Comparison Video</h2>
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/G7khchtGL2A?si=IHTwCbHKAoA84M0Y"
+                    alt="YouTube video of console Comparison"></iframe>
              </div>
         </section>
         <!--FORM-->
@@ -58,7 +60,7 @@
             <div>
                 <h3>Please fill out the contact form if you wish to get in touch with us.</h3>
                 <div>
-                    <form action="">
+                    <form>
                         <input type="text" placeholder="First Name">
                         <input type="text" placeholder="Last Name">
                         <br>

@@ -1,0 +1,56 @@
+/*BODY*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    background-color:cornsilk;
+}
+
+/*HEADER*/
+/*Add top and bottom margins to h1 element in header*/
+#welcome {
+    margin-top: 30px;
+    margin-bottom: -5px;
+}
+
+/*Add bottom padding to p element in header*/
+#page {
+    padding-bottom: 10px;
+}
+
+/*CONSOLE IMAGES*/
+.console-container {
+    margin: 15px 15px; /*Adds 15px margin to all sides of console images section*/
+    padding-bottom: 30px; /*Adds 30px bottom padding to console images section*/
+}
+
+/*Display all images in size 1200px x 720px*/
+img {
+    width: 1200px;
+    height: 720px;
+}
+
+/*VIDEO*/
+#video {
+    padding-bottom: 40px; /*Add 40px bottom padding to div containing video*/
+}
+
+/*FORM*/
+form {
+    padding-bottom: 50px;
+}
+
+/*Styles both input and textarea elements within the form*/
+form input, form textarea {
+    width: 18em; /*Width of inputs scales with screen size*/
+    height: 2em; /*Height of inputs sales with screen size*/
+    margin: 5px 5px; /*Adds equal spacing on top and bottom, left and right of inputs*/
+    border: 1px solid blue; /*Adds solid blue border 1px thick to inputs*/
+    border-radius: 5px; /*Creates rounded edges of 5px for input borders*/
+}
+
+/*FOOTER*/
+/*Styles the table within the footer*/
+footer table {
+    display: flex; /*Place table into flex container*/
+    justify-content: center; /*Center elements within table*/
+}
