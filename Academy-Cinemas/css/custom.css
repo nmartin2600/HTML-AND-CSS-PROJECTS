@@ -1,7 +1,9 @@
 /*Import Passion One font from Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
-
+/*Import Yesteryear font from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
 /*Creates global CSS variables to reuse throughout the file*/
+
 :root {
     --main-color: rgb(126,133,130);
     --main-color-accent: rgb(237,192,3);
@@ -10,6 +12,7 @@
     --accent-color: rgb(36,36,36);
     --accent-text-color: rgb(255,255,255);
     --main-font-family: 'Passion One', cursive;
+    --secondary-font-family: 'Yesteryear', cursive;
 }
 
 body {
@@ -105,7 +108,7 @@ body {
 }
 
 /*GENERAL STYLING*/
-h1, h3, p {
+h1, h3, h4, p {
     cursor: default; /*Changes cursor back to default when hovering over text*/
 }
 
@@ -122,6 +125,11 @@ h3 {
     font-size: 50px;
 }
 
+h4 {
+    font-family: var(--secondary-font-family);
+    font-size: 25px;
+}
+
 b {
     font-weight: 600;
 }
@@ -129,4 +137,23 @@ b {
 /*MOVIE CARDS*/
 .container {
     padding: 100px;
+}
+
+/*BUTTONS*/
+/*Creates the main styling for buttons containing Bootstrap .btn class*/
+.btn {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: var(--accent-color);
+    font-family: var(--main-font-family);
+    font-size: 18px;
+}
+
+.btn:focus {
+    border-color: transparent; /*Overrides Bootstrap dark border when user clicks button*/
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
 }
