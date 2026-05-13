@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+}
+
+td, th {
+    text-align: center;
+    border: 1px solid darkgrey;
+    padding: 8px;
+}
+
+tr th {
+    background-color: darkseagreen;
+}
