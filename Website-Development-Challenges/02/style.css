@@ -1,0 +1,13 @@
+footer {
+    position: fixed;
+    background-color: #216391;
+    width: 100%;
+    left: 0; /*Makes footer take up entire width of browser window*/
+    bottom: 0; /*Positions footer on bottom of screen*/
+}
+
+footer p {
+    color: beige;
+    text-align: center;
+    font-weight: bold;
+}
