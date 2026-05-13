@@ -1,0 +1,16 @@
+.row {
+    display: flex;
+}
+
+.column {
+    color: wheat;
+    background-color: cornflowerblue;
+    flex: 50%;
+    padding: 10px;
+    width: 100%;
+    height: 15rem;
+}
+
+#second {
+    background-color: rgb(82, 120, 191);
+}
