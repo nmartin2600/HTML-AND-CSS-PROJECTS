@@ -1,7 +1,20 @@
+/*HTML*/
+html {
+    font-family: Arial, sans-serif; /*Set font for entire website to Arial*/
+}
+
+.content-container {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
 /*NAVBAR*/
 .topnav {
-    background-color: #333; /*Add a black background color to navbar*/
+    background-color: #7b7485; /*Add a black background color to navbar*/
     overflow: hidden;
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: small;
 }
 
 /*Style the links inside navbar*/
@@ -22,6 +35,31 @@
 
 /*Add a color to the selected link*/
 .topnav a:active {
-    background-color: #04aa6d;
+    background-color: #000080;
     color: white;
+}
+
+/*INFO TILES*/
+/*Styles div elements on page with info-tile class*/
+.info-tile {
+    border-style: 0px solid black;
+    box-shadow: 4px 5px 10px gray;
+    margin-bottom: 18px;
+    padding: 25px;
+}
+
+/*Style p elements inside info-tile div elements*/
+.info-tile p {
+    text-align: justify;
+}
+
+#impact-para {
+    padding: 20px;
+}
+
+/*IMAGES*/
+img {
+    float: right;
+    height: 250px;
+    margin-left: 40px;
 }
