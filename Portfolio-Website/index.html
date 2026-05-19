@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--HEAD-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Nicholas Martin | Developer Portfolio</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <!--BODY-->
+    <body>
+        <!--NAVBAR-->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!--BACKGROUND VIDEO-->
+        <div id="home">
+            <video autoplay muted loop src="videos/coding.mp4" type="video/mp4" id="bg-video">
+                <!--Display message if video fails to load-->
+                Unable to load HTML5 video.
+            </video>
+        </div>
+        <!--VIDEO TEXT-->
+        <div id="video-text">
+            <h1>Nicholas Martin</h1>
+            <p>Full-stack Developer</p>
+        </div>
+        <!--ABOUT ME-->
+        <div class="row" id="about">
+            <!--LEFT COLUMN-->
+            <div class="column-2">
+                <img src="images/nicholas.jpg" alt="Picture of Nicholas Martin">
+            </div>
+            <!--RIGHT COLUMN-->
+            <div class="column-1">
+                <h1>About Me</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis rhoncus ipsum, rutrum luctus
+                    ex interdum in. Donec ipsum lorem, sodales mollis iaculis eget, bibendum id odio. Morbi neque est,
+                    tincidunt a nulla quis, pellentesque pulvinar neque. Donec pretium nunc ut magna euismod, pellentesque
+                    fringilla turpis consectetur. Fusce eget magna sapien. Donec nec eros scelerisque, elementum est in,
+                    dictum metus. Mauris porttitor interdum nunc. Sed fermentum enim velit. Praesent vel egestas elit. Proin
+                    dignissim condimentum scelerisque. Ut eget neque ut dolor tristique varius. Aenean eget leo massa. Fusce
+                    tincidunt luctus dui sit amet pulvinar. Nullam viverra elementum nisl eget egestas.
+                </p>
+            </div>
+        </div>
+        <!--GITHUB-->
+        <div class="row" id="github">
+            <!--LEFT COLUMN-->
+            <div class="column-1">
+                <h1>GitHub</h1>
+                <p>
+                    My programming projects can be found on my GitHub profile here:
+                    <br>
+                    <p><a href="https://github.com/nmartin2600">My GitHub</a></p>
+                </p>
+            </div>
+            <!--RIGHT COLUMN-->
+            <div class="column-2">
+                <img src="images/github.png" alt="GitHub logo">
+            </div>
+        </div>
+        <!--CONTACT-->
+        <div class="row" id="contact">
+            <!--LEFT COLUMN-->
+            <div class="column-2 column-tall">
+                <img src="images/code.jpg" alt="Picture of code">
+            </div>
+            <!--RIGHT COLUMN-->
+            <div class="column-1 column-tall">
+                <h1>Contact</h1>
+                <!--CONTACT FORM-->
+                <form action="" method="post">
+                    <label>Name:</label>
+                    <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                    <input type="email" name="" id="" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                    <textarea name="" id="" placeholder="Please write your message here..."></textarea>
+                    <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+    </body>
+    <!--FOOTER-->
+    <footer>
+        <p>Nicholas Martin</p>
+        <p>nicholas.martin2600@gmail.com</p>
+    </footer>
+</html>
