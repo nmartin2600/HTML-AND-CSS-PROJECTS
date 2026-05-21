@@ -1,0 +1,217 @@
+/*HTML*/
+html {
+    height: 100%;
+}
+
+/*BODY*/
+body {
+    margin: 0; /*Page displays all the way to the edge of the browser screen*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*All elements will be at least as tall as viewport, but can grow further*/
+    overflow-x: hidden;
+}
+
+/*HYPERLINKS*/
+a {
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ee9172;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: 0.5s ease-out;
+}
+
+/*NAVBAR*/
+nav {
+    overflow: hidden; /*Content that overflows beyond boundary of navbar is not displayed*/
+    background-color: #6a3ab7;
+    position: fixed; /*Keeps navbar at top of the screen as user scrolls*/
+    top: 0; /*No space is displayed above navbar*/
+    width: 100%; /*Navbar spans entire width of page*/
+    border-bottom: 5px solid #4a2587; /*Add solid border size 5px to bottom of navbar*/
+    z-index: 1000 !important; /*Keeps navbar on top of other elements*/
+}
+
+nav ul {
+    list-style-type: none; /*Removes bullets*/
+    padding: 0;
+    display: flex; /*Makes list horizontal*/
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li a {
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ee9172;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: 0.5s ease-out;
+}
+
+nav li a:hover {
+    color: #f7bba7;
+    transition: 0.5s ease-in;
+}
+
+/*HEADING*/
+h1 {
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 3%;
+    color: #ff865d;
+}
+
+h1:hover {
+    transform: scale(1.1); /*When h1 elements are hovered over they increase in size by 1.1*/
+    transition: transform 1s; /*This causes the transformation to last 1 second*/
+}
+
+/*PARAGRAPH*/
+p {
+    font-family: Verdana, sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #6a3ab7;
+}
+
+/*IMAGES*/
+img {
+    display: block;
+    border-radius: 8px;
+    height: 340px;
+    max-width: 100%; /*All images stay within width of their container*/
+    /*Centers all images*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*VIDEO*/
+/*div containing video banner*/
+#home {
+    position: relative; /*Child elements will stick inside this div*/
+    margin-top: 50px; /*Top margin pushes div down so it sits below navbar*/
+    height: 50vh; /*Caps total height of video banner to 50% of screen height*/
+    width: 100%; /*div spans full width of browser window*/
+    overflow: hidden; /*Hides scrollbars on video*/
+    flex-shrink: 0; /*div cannot shrink below 50% of viewport*/
+    background: #000; /*Fallback background color to display when video is loading*/
+}
+
+#home #bg-video {
+    /*Places video on top-left edge of div*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*Forces video to match 100% of width and height of div*/
+    width: 100% !important;
+    height: 100% !important;
+    /**/
+    object-fit: cover; /*Automatically crop and stretch video to fill space of div*/
+    z-index: 1;
+    display: block;
+}
+
+/*Dark tint placed over video banner*/
+#home::before {
+    content: ""; /*Inject invisible element inside HTML of div*/
+    /*Places the tint over the video*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*Black overlay at 50% opacity*/
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+#video-text {
+    box-sizing: border-box; /*Internal margins and paddings are calculated inside box*/
+    /*Places text at same coordinates as video and overlay tint*/ 
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /**/
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-text h1 {
+    font-size: 3rem;
+}
+
+#video-text p {
+    color: #ceb2fa;
+    font-size: x-large;
+}
+
+#video-text p:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+/*Screens that are 576px and smaller will not display the video banner*/
+@media screen and (max-width: 576px) {
+    #home {
+        display: none;
+    }
+}
+
+/*TABLE STYLING*/
+* {
+    box-sizing: border-box;
+}
+
+/*FOOTER*/
+footer {
+    display: flex;
+    justify-content: space-evenly; /*Centers the group horizontally*/
+    align-items: center; /*Centers the items vertically*/
+    gap: 5px; /*Controls the space between paragraphs*/
+    padding: 3px; /*Adds breathing room inside the footer*/
+    background-color: #6a3ab7;
+    border-top: 5px solid #4a2587;
+    flex-shrink: 0;
+}
+
+footer p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ee9172;
+    transition: 0.5s ease-out;
+}
+
+footer p:hover {
+    color: #f7bba7;
+    transition: 0.5s ease-in;
+}
+
+footer p a {
+    text-align: center;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    color: #f7bba7;
+    transition: 0.5s ease-in;
+}
+
+/*Make text oblique for p element containing developer name*/
+.oblique-text {
+    font-style: oblique;
+}
