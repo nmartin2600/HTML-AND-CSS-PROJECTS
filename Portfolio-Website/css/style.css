@@ -78,6 +78,11 @@ p:hover {
     transition: 0.5s ease-in;
 }
 
+/*Class to add top margin to individual p elements*/
+.p-margin {
+    margin-top: 8%;
+}
+
 #github p a {
     font-family: Verdana, sans-serif;
     text-align: left;
@@ -85,10 +90,25 @@ p:hover {
     font-weight: bold;
     color: #ff865d;
     transition: 0.5s ease-out;
-    padding: 5px 8px;
+    padding: 7px;
 }
 
 #github p a:hover {
+    color: #e44a16;
+    transition: 0.5s ease-in;
+}
+
+#about p a {
+    font-family: Verdana, sans-serif;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff865d;
+    transition: 0.5s ease-out;
+    padding: 4px;
+}
+
+#about p a:hover {
     color: #e44a16;
     transition: 0.5s ease-in;
 }
