@@ -199,7 +199,7 @@ footer {
     /*Negative margins stretch footer beyond web browser screen edge*/
     margin-right: -10px;
     margin-left: -10px;
-    bottom: 0; /*Positions footer on bottom of screen*/
+    margin-bottom: -10px; /*Extends footer to bottom of screen*/
 }
 
 /*Styles table elements within the footer tags*/
