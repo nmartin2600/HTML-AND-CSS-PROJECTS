@@ -27,3 +27,51 @@ for (var i = 0; i < closeBtn.length; i++) {
         }
     }
 }
+
+// EMAIL VALIDATION
+document.getElementById('contactForm').addEventListener('submit', 
+    function (event) {
+        // Overrides default browser refresh when submit button is pressed
+        event.preventDefault();
+        
+        // Variables to validate that each field is filled out
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        // Email pattern checks for text and all symbols needed
+        // for an email address such as @ and .
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        // Use this variable to display messages if fields are filled
+        // out or thank you message
+        const valMsg = document.getElementById('validateMsg');
+
+        if (!firstName || !lastName || !phone || !message) {
+            // Checks if fields have been filled out
+            valMsg.innerHTML = '<p style="color: red;">Please fill out all empty fields.</p>';
+        }
+        else if (!emailPattern.test(email)) {
+            // Checks if there is a valid email
+            valMsg.innerHTML = '<p style="color: red;">Please enter a valid email.</p>';
+        }
+        else {
+            // Display thank you message if all fields are filled out correctly
+            valMsg.innerHTML = '<p style="color: red;">Thank you for submitting!</p>';
+        }
+
+        const formData = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            phone: phone,
+            message: message,
+            subscribe: document.getElementById('subscription').checked
+        };
+
+        // Displays what user wrote in the console
+        console.log(JSON.stringify(formData));
+    }
+)
