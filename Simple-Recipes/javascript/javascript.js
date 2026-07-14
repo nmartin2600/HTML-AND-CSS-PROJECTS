@@ -14,6 +14,9 @@ for (var i = 0; i < btns.length; i++) {
     btns[i].onclick = function (event) {
         modal = document.querySelector(event.target.getAttribute("href"));
         modal.style.display = "block";
+        // Make the modal close automatically after 10 seconds
+        const timeout = setTimeout(closeModal, 10000);
+        function closeModal() { modal.style.display = "none"; }
     }
 }
 
