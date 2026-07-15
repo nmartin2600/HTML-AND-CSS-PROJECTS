@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="description" content="Webpage about video game consoles">
         <link rel="stylesheet" href="css/open_page_website.css">
+        <script src="js/one_page_website.js" defer></script>
     </head>
     <body>
         <!--NAVBAR-->
@@ -23,6 +24,59 @@
                 <p id="page">This page will show you about various video game consoles!</p>
             </div>
         </header>
+        <!--CONSOLE LIGHTBOX-->
+        <!-- Images used to open the lightbox -->
+        <div class="row">
+            <div class="column">
+                <img class="hover-shadow" id="thumbnail" src="images/switch2.jpg" 
+                    alt="Switch 2 thumbnail" onclick="openModal();currentSlide(1)">
+            </div>
+            <div class="column">
+                <img class="hover-shadow" id="thumbnail" src="images/ps5.jpg"
+                    alt="PlayStation 5 thumbnail" onclick="openModal();currentSlide(2)">
+            </div>
+            <div class="column">
+                <img class="hover-shadow" id="thumbnail" src="images/xbox.jpg"
+                    alt="Xbox thumbnail" onclick="openModal();currentSlide(3)">
+            </div>
+        </div>
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <img id="enlarged" src="images/switch2.jpg" alt="Switch 2">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img id="enlarged" src="images/ps5.jpg" alt="PlayStation 5">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img id="enlarged" src="images/xbox.jpg" alt="Xbox">
+                </div>
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!-- Caption text -->
+                <div class="caption-container">
+                <p id="caption"></p>
+                </div>
+                <!-- Thumbnail image controls -->
+<!--            <div class="column">
+                <img class="demo" src="images/switch2.jpg" onclick="currentSlide(1)" alt="Switch 2">
+                </div>
+
+                <div class="column">
+                <img class="demo" src="images/ps5.jpg" onclick="currentSlide(2)" alt="PlayStation 5">
+                </div>
+
+                <div class="column">
+                <img class="demo" src="images/xbox.jpg" onclick="currentSlide(3)" alt="Xbox Series X">
+                </div> -->
+            </div>
+        </div>
         <!--CONSOLE IMAGES-->
         <section>
             <div>
@@ -51,7 +105,7 @@
              <!--CONSOLE VIDEO-->
              <div id="video">
                 <h2>Console Comparison Video</h2>
-                <iframe width="1280" height="720" src="https://www.youtube.com/embed/G7khchtGL2A?si=IHTwCbHKAoA84M0Y"
+                <iframe width="900" height="600" src="https://www.youtube.com/embed/G7khchtGL2A?si=IHTwCbHKAoA84M0Y"
                     alt="YouTube video of console Comparison"></iframe>
              </div>
         </section>
