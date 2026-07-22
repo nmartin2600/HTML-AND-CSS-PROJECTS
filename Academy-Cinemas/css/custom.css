@@ -280,3 +280,8 @@ selector styling*/
     width: auto;
     height: 130px;
 }
+
+/*POPOVERS*/
+.star-rating {
+    width: 80%;
+}
