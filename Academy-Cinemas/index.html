@@ -202,7 +202,7 @@
                     <div class="card text-center">
                         <h5 class="card-title">Please select a movie</h5>
                         <div class="card-body">
-                            <select class="form-select" aria-label="Movie title selection">
+                            <select id="movieSelect" class="form-select" aria-label="Movie title selection">
                                 <option selected>Select movie</option>
                                 <option value="1">Ben-Hur</option>
                                 <option value="2">The Day The Earth Stood Still</option>
@@ -216,7 +216,7 @@
                     <div class="card">
                         <h5 class="card-title">Please select a show time</h5>
                         <div class="card-body text-center">
-                            <select class="form-select" aria-label="Movie title selection">
+                            <select id="timeSelect" class="form-select" aria-label="Movie title selection">
                                 <option selected>Select time</option>
                                 <option value="1">10:00 AM</option>
                                 <option value="2">11:30 AM</option>
@@ -241,11 +241,21 @@
             <!--BUY TICKETS BUTTON-->
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <button type="submit" class="btn yellow-btn">Buy Tickets</button>
+                    <button type="submit" class="btn yellow-btn" onclick="buyTickets()">Buy Tickets</button>
                 </div>
             </div>
         </div>
     </section>
+    <!--BOOTSTRAP TOAST-->
+    <div id="toastDisplay" class="custom-toast toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Ticket Information</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div id="toastBody" class="toast-body">
+            <!--Selected options will be displayed here-->
+        </div>
+    </div>
     <!--CONTACT FORM-->
     <section>
         <div class="container" id="contact">
@@ -267,6 +277,12 @@
             </div>
         </div>
     </section>
+    <!--NEW BOOTSTRAP COMPONENT-->
+    <div class="container">
+        <h3 style="color: white;">New component 
+            <span class="badge text-bg-warning">Badge</span>
+        </h3>
+    </div>
     <!--FOOTER-->
     <section>
         <div class="container-fluid">
